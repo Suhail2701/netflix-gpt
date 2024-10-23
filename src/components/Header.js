@@ -1,4 +1,3 @@
-// import logo from "../../public/Netflix-Logo.png";
 import { useEffect } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";

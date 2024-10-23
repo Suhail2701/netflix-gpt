@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const MoviesCard = ({movies})=>{
 
-    // const movies = useSelector((store)=> store.movies.nowPlayingMovies);
+    
     console.log("MoviesCard",movies );
     return (
         

@@ -9,12 +9,11 @@ import MovieDetailText from "./MovieDetailText";
 const MovieDetails = ()=>{
 
     const {movieId} = useParams();
-
     useSelectedMovie(movieId);
     const storeTrailer = useSelector((store)=>store.movies.selectedMovie);
 
     return(
-        <div>
+        <div className="bg-black">
             <Header/>
             <MovieDetailVedio storeTrailer={storeTrailer}/>
             <MovieDetailText movieId={movieId}/>

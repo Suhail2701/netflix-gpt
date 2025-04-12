@@ -9,19 +9,19 @@ import { useSelector } from "react-redux";
 import GptSearch from "./GptSearch";
 
 
-const Browse = ()=>{
+const Browse = () => {
 
     useNowPlayingMovies();
     usePopularMovies();
     useTopRatedMovies();
     useUpCommingMovies();
-    const gptView = useSelector((store)=>store.gpt.showGptSearch);
+    const gptView = useSelector((store) => store.gpt.showGptSearch);
 
-    return(
+    return (
         <div className="bg-black">
-             <Header/>
-            {gptView?<GptSearch/>:<><MainContainer/>
-                <SecondaryContainer/></>}   
+            <Header />
+            {gptView ? <GptSearch /> : <><MainContainer />
+                <SecondaryContainer /></>}
         </div>
     )
 }

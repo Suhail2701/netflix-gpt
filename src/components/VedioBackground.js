@@ -5,7 +5,6 @@ import useMovieTrailer from "../hooks/useMovieTrailer";
 const VedioBackground = ({id})=>{
 
     useMovieTrailer(id);
-    
     const storeTrailer = useSelector((store)=>store.movies.movieTrailer);
 
    

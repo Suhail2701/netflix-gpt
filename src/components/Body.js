@@ -4,31 +4,31 @@ import MovieDetails from "./MovieDetails";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
-const Body = ()=>{
+const Body = () => {
 
-    
+
     const appRouter = createBrowserRouter([
-       
+
         {
-            path:"/",
-            element:<Login/>,
+            path: "/",
+            element: <Login />,
         },
         {
-            path:"/browse",
-            element:<Browse/>,
+            path: "/browse",
+            element: <Browse />,
         },
         {
-            path:"/browse/movieDetails/:movieId",
-            element:<MovieDetails/>
+            path: "/browse/movieDetails/:movieId",
+            element: <MovieDetails />
         },
-     
+
     ])
 
 
     return (
-    <div>
-       <RouterProvider router={appRouter}/>
-    </div>
+        <div>
+            <RouterProvider router={appRouter} />
+        </div>
     )
 }
 

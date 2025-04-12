@@ -20,6 +20,7 @@ const Header = () => {
     const user = useSelector((store) => store.user);
     const gptSearch = useSelector((store)=> store.gpt.showGptSearch);
     const config = useSelector((store)=>store.config.lang);
+    const gptView = useSelector((store) => store.gpt.showGptSearch);
 
     const handleSignOut = () => {
         signOut(auth).then(() => {
@@ -68,7 +69,7 @@ const Header = () => {
                     return <option key={lan.identifier} className=" rounded-lg" value={lan.identifier}>{lan.name}</option>
                 })}
                 </select>}
-                {user && <button onClick={handleGptSearchView} className="text-white bg-purple-700 font-semibold p-2 rounded-lg hover:bg-purple-900 text-sm sm:text-lg">{gptSearch?lang[config].homePage:lang[config].gptSearchBtn}</button>}
+                {user &&  (location.pathname.startsWith("/browse/movieDetails") && gptView)?navigate("/browse"): <button onClick={handleGptSearchView} className="text-white bg-purple-700 font-semibold p-2 rounded-lg hover:bg-purple-900 text-sm sm:text-lg">{gptSearch?lang[config].homePage:lang[config].gptSearchBtn}</button>}
                 {user && <div className=" group">
                     
                     <img src={ACC} alt="account" className="w-10 p-1 transform transition-transform duration-300 hover:rotate-180 cursor-pointer" />
